@@ -216,15 +216,15 @@
         margin: 0;
         padding: 0;
         color: #858C8E;
-        font-size: 95px;
+        font-size: 90px;
         animation: autoShow both;
         animation-timeline: view(65% 10%);
     }
     #about-me .me-text {
         margin: 0;
-        padding: 0;
+        padding-right: 0.5em;
         color: var(--acqua);
-        font-size: 120px;
+        font-size: 110px;
         animation: autoShow both;
         animation-timeline: view(65% 10%);
     }
