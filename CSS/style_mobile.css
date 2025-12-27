@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@media (max-width: 960px){
+    
+    :root {
+        --magenta: rgba(238, 66, 102, 1);
+        --acqua: rgba(140, 223, 214, 1);
+        --gold: rgba(213, 185, 66, 1);
+        --darkGrey: rgba(39, 38, 53, 1);
+
+    }
+    /*  ANIMAZIONI */
+    @keyframes autoShow {
+        from {
+            opacity: 0;
+            transform: translateY(100px) scale(.3);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ul, li, a {
+        text-decoration: none;
+        list-style: none;
+    }
+    body {
+        color: white;
+        font-size: 16px;
+        margin: 0 auto;
+        background-color: var(--darkGrey);
+        font-family: "Kanit", sans-serif;
+        word-break: break-all;
+    }
+    
+    /* container */
+    #container {
+        width: 100%;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .wrap {
+        background-color: var(--darkGrey);
+        word-wrap: break-word;
+        margin: 0 auto;
+        display: flex;
+        height: max-content;
+        width: 100%;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    /* contenitore header */
+    .header {
+        background-color: var(--darkGrey);
+        position: fixed;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        z-index: 1000;
+    }
+    
+    /* lista menu */
+    .nav-menu {
+        position: fixed;
+        z-index: 1000;
+        top: 60px;
+        height: fit-content;
+        text-align: center;
+        display: none;
+        width: 100%;
+        box-shadow: 5px 5px 10px var(--darkGrey);
+    }
+    .nav-menu ul {
+        margin-top: 1.5rem;
+        width: 100%;
+        padding: .8rem;
+        background-color: var(--darkGrey);
+        transition: 1s;
+    }
+    .nav-menu li {
+        padding: 1rem;
+    }
+    .nav-menu a {
+        color: white;
+        padding: .5rem;
+        margin: .5rem;
+    }
+    .nav-menu li:hover{
+        background-color: black;
+    }
+    .nav-menu .menu-hamburger {
+        cursor: pointer;
+    }
+    .show-menu {
+        display: block;
+        width: 90%;
+        transition: 1s;
+        max-height: min-content;
+    }
+    .show-menu img {
+        transform: rotate(90deg);
+    }
+    .reset {
+        display: block;
+    }
+    /*  HERO SECTION */
+    #hero-section {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 8rem;
+        display:block;
+        /* border: 1px solid salmon; */
+    }
+    #hero-section h2 {
+        font-weight: 200;
+        line-height: 1.6rem;
+        color:var(--acqua);
+    }
+    #hero-section .web {
+        display: block;
+        padding-top: 1.5rem;
+        line-height: 4rem;
+        font-size: 80px;
+    }
+    #hero-section .title-page {
+        display: block;
+        line-height: .8em;
+        font-size: 150px;
+    }
+    #hero-section .hero-text {
+        display: block;
+        padding: 1.8rem 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        word-break: normal;
+    }
+    #cta-button {
+        display: flex;
+        justify-content: center;
+        color: black;
+        text-align: center;
+        margin: 1rem auto;
+        background-color: var(--acqua);
+        box-shadow: 0 0 10px var(--acqua);
+        width: 200px;
+        height: 40px;
+        border-radius: .5em;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+    #cta-button:hover {
+        transition: box-shadow 1s, background-color 1s;
+
+        background-color: var(--magenta);
+        box-shadow: 0 0 20px var(--magenta);
+    }
+    /*  OGNI PIXEL */
+    .poesia {
+        width: 90%;
+        /* border: 1px salmon solid; */
+        margin: 8rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .poesia .ogni-pixel {
+        font-size: 40px;
+        color: #514F4F;
+        animation: autoShow both;
+        animation-timeline: view(60% 10%);
+    }
+    .poesia .racconta-text {
+        font-size: 70px;
+        line-height: 0.5em;
+        animation: autoShow both;
+        animation-timeline: view(60% 10%);
+    }
+    .poesia .una-storia-text {
+        color: var(--gold);
+        font-size: 40px;
+        line-height: 1.5em;
+        animation: autoShow both;
+        animation-timeline: view(60% 10%);
+    }
+    .poesia .poesia-text {
+        display: block;
+        padding: 1.8rem 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        word-break: normal;
+        animation: autoShow both;
+        animation-timeline: view(65% 10%);
+    }
+
+    #about-me {
+        /* border: 1px solid salmon; */
+        width: 90%;
+        display: flex;
+        margin: 1em auto;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+    }
+    #about-me .about-tex {
+        margin: 0;
+        padding: 0;
+        color: #858C8E;
+        font-size: 95px;
+        animation: autoShow both;
+        animation-timeline: view(65% 10%);
+    }
+    #about-me .me-text {
+        margin: 0;
+        padding: 0;
+        color: var(--acqua);
+        font-size: 120px;
+        animation: autoShow both;
+        animation-timeline: view(65% 10%);
+    }
+    #about-me .about-me-text {
+        text-align: left;
+        display: block;
+        padding: 1.2rem 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        word-break: normal;
+        animation: autoShow both;
+        animation-timeline: view(65% 10%);
+    }
+
+    /*      FOOTER       */
+    #footer {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        box-shadow: 0 -5px 5px var(--darkGrey);
+        background-color: black;
+    }
+    #footer a {
+        color: white;
+    }
+    /* SLIDE */
+    .slider{
+
+    width: min(900px, 100%);
+    margin: 3rem auto;
+    }
+
+    /* nascondo i radio */
+    .slider input{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    }
+
+    .viewport{
+    overflow: hidden;
+    border-radius: 16px;
+    }
+
+    .track{
+    display: flex;
+    width: 300%;                 /* 3 slide */
+    transition: transform .45s ease;
+    }
+
+    .slide{
+    width: 100%;
+    margin: 0;
+    aspect-ratio: 16 / 9;        /* cambia se vuoi 4/3 o 1/1 */
+    background: #111;
+    display: grid;
+    }
+
+    .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;           /* non deforma, ritaglia */
+    display: block;
+    }
+
+    /* spostamenti */
+    #s1:checked ~ .viewport .track{ transform: translateX(0%); }
+    #s2:checked ~ .viewport .track{ transform: translateX(-33.333%); }
+    #s3:checked ~ .viewport .track{ transform: translateX(-66.666%); }
+
+    /* dots */
+    .dots{
+    display: flex;
+    justify-content: center;
+    gap: .6rem;
+    margin-top: 1rem;
+    }
+
+    .dots label{
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #777;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+    }
+
+    #s1:checked ~ .dots label[for="s1"],
+    #s2:checked ~ .dots label[for="s2"],
+    #s3:checked ~ .dots label[for="s3"]{
+    background: #fff;
+    transform: scale(1.2);
+    }
+    #works-section {
+        width: 90%;
+        margin: 7em auto;
+    }
+    #works-section .work-welcome {
+        margin: 0;
+        padding: 0;
+        font-size: 50px;
+    }
+    #works-section .work-welcome span{
+        font-size: 40px;
+        color: var(--acqua);
+    }
+    #works-section .work-page {
+        font-size: 70px;
+        margin: 0;
+        padding: 0;
+        line-height: 3rem;
+    }
+    .work-text {
+        text-align: left;
+        display: block;
+        padding: 1.2rem 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        word-break: normal;
+        animation: autoShow both;
+        animation-timeline: view(65% 10%);
+    }
+
+
+}
